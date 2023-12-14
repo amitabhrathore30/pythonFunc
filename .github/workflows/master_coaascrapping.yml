@@ -5,12 +5,10 @@
 name: Build and deploy Python project to Azure Function App - coaascrapping
 
 on:
-  push:
-    branches:
-      - master
-  workflow_dispatch:
+  [push]
 
 env:
+  AZURE_FUNCTIONAPP_NAME: coaascrapping
   AZURE_FUNCTIONAPP_PACKAGE_PATH: '..' # set this to the path to your web app project, defaults to the repository root
   PYTHON_VERSION: '3.11' # set this to the python version to use (supports 3.6, 3.7, 3.8)
 
